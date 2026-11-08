@@ -1,0 +1,169 @@
+{
+  "action": "dialogue_qa",
+  "checkpoint_actual_tokens": 2000896,
+  "checkpoint_requested_tokens": 2000000,
+  "continuation": {
+    "batch_sequence_sha256": "81334c640b17659155589d0b49d334fc1ff943c64c82b4cb56f6bb2ab17db00e",
+    "requested_horizons": [
+      250000,
+      500000,
+      1000000
+    ],
+    "stats": {
+      "1000000": {
+        "elapsed_seconds": 65.61540810001316,
+        "mean_loss_nats": 2.514780923968456,
+        "steps": 244,
+        "tokens": 499712,
+        "tokens_per_second": 7615.772186287748
+      },
+      "250000": {
+        "elapsed_seconds": 33.125430599960964,
+        "mean_loss_nats": 2.601792853053023,
+        "steps": 123,
+        "tokens": 251904,
+        "tokens_per_second": 7604.5502031993765
+      },
+      "500000": {
+        "elapsed_seconds": 31.79907439998351,
+        "mean_loss_nats": 2.5691887804719267,
+        "steps": 122,
+        "tokens": 249856,
+        "tokens_per_second": 7857.335621068567
+      }
+    }
+  },
+  "evaluations": {
+    "continuation_1000000": {
+      "domains": {
+        "code": {
+          "bits_per_byte": 3.8065601453400606,
+          "loss_nats": 2.6385064323743186,
+          "tokens": 24576
+        },
+        "dialogue_qa": {
+          "bits_per_byte": 4.0962278011296505,
+          "loss_nats": 2.8392887512842813,
+          "tokens": 24576
+        },
+        "prose": {
+          "bits_per_byte": 3.2638284172919647,
+          "loss_nats": 2.2623134652773538,
+          "tokens": 24576
+        },
+        "science_math": {
+          "bits_per_byte": 3.41164171562597,
+          "loss_nats": 2.3647698362668357,
+          "tokens": 24576
+        }
+      },
+      "macro_mean_bits_per_byte": 3.644564519846911,
+      "micro_bits_per_byte": 3.644564519846911,
+      "micro_loss_nats": 2.5262196213006973,
+      "tokens": 98304
+    },
+    "continuation_250000": {
+      "domains": {
+        "code": {
+          "bits_per_byte": 3.9974124173540098,
+          "loss_nats": 2.770795146624247,
+          "tokens": 24576
+        },
+        "dialogue_qa": {
+          "bits_per_byte": 4.218421245257475,
+          "loss_nats": 2.923986792564392,
+          "tokens": 24576
+        },
+        "prose": {
+          "bits_per_byte": 3.4298564555064,
+          "loss_nats": 2.3773953318595886,
+          "tokens": 24576
+        },
+        "science_math": {
+          "bits_per_byte": 3.5833425729153396,
+          "loss_nats": 2.483783801396688,
+          "tokens": 24576
+        }
+      },
+      "macro_mean_bits_per_byte": 3.8072581727583064,
+      "micro_bits_per_byte": 3.807258172758306,
+      "micro_loss_nats": 2.638990268111229,
+      "tokens": 98304
+    },
+    "continuation_500000": {
+      "domains": {
+        "code": {
+          "bits_per_byte": 3.9309429286133684,
+          "loss_nats": 2.7247220079104104,
+          "tokens": 24576
+        },
+        "dialogue_qa": {
+          "bits_per_byte": 4.198700109338137,
+          "loss_nats": 2.910317142804464,
+          "tokens": 24576
+        },
+        "prose": {
+          "bits_per_byte": 3.3584687502352595,
+          "loss_nats": 2.327913145224253,
+          "tokens": 24576
+        },
+        "science_math": {
+          "bits_per_byte": 3.5430103195222244,
+          "loss_nats": 2.455827613671621,
+          "tokens": 24576
+        }
+      },
+      "macro_mean_bits_per_byte": 3.7577805269272475,
+      "micro_bits_per_byte": 3.7577805269272475,
+      "micro_loss_nats": 2.604694977402687,
+      "tokens": 98304
+    },
+    "immediate": {
+      "domains": {
+        "code": {
+          "bits_per_byte": 4.1577241822103925,
+          "loss_nats": 2.881914794445038,
+          "tokens": 24576
+        },
+        "dialogue_qa": {
+          "bits_per_byte": 4.194276600902845,
+          "loss_nats": 2.907251000404358,
+          "tokens": 24576
+        },
+        "prose": {
+          "bits_per_byte": 3.652298844796132,
+          "loss_nats": 2.531580646832784,
+          "tokens": 24576
+        },
+        "science_math": {
+          "bits_per_byte": 3.7139871011876866,
+          "loss_nats": 2.5743396878242493,
+          "tokens": 24576
+        }
+      },
+      "macro_mean_bits_per_byte": 3.929571682274264,
+      "micro_bits_per_byte": 3.9295716822742643,
+      "micro_loss_nats": 2.7237715323766074,
+      "tokens": 98304
+    }
+  },
+  "experiment_id": "nlrr1-discovery-v1",
+  "final_global_tokens": 3254272,
+  "intervention": {
+    "batch_sequence_sha256": "b10befac753b477b39fea7ee7f0682aa92c026915221e8f4e5be42171e613db4",
+    "requested_tokens": 250000,
+    "stats": {
+      "elapsed_seconds": 53.51681970001664,
+      "mean_loss_nats": 2.838155027327499,
+      "steps": 123,
+      "tokens": 251904,
+      "tokens_per_second": 4707.006160157191
+    }
+  },
+  "parameter_count": 2525600,
+  "parent_model_state_sha256": "a385788f6b8b0ac2f94dd34223b198d9da5921d3c73bcc25d7a56f567bdb10cc",
+  "seed": 3301,
+  "status": "complete",
+  "terminal_model_state_sha256": "9b942bd57ee20abfde4a656b345babc404fedc4187883177e927f181d0fb5c6e",
+  "tokens_per_step": 2048
+}

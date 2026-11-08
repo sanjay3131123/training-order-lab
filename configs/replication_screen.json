@@ -1,0 +1,53 @@
+{
+  "experiment_id": "nlrr1-replication-screen-v1",
+  "cache_dir": ".cache/training-order-lab",
+  "domains": ["prose", "science_math", "code", "dialogue_qa"],
+  "actions": ["science_math", "balanced"],
+  "data": {
+    "target_bytes": {
+      "train": 2500000,
+      "development": 320000,
+      "meta_test": 320000,
+      "replication": 320000
+    },
+    "minimum_document_bytes": 160,
+    "maximum_document_bytes": 2000000,
+    "source_seed": 2718
+  },
+  "model": {
+    "vocab_size": 258,
+    "block_size": 256,
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 224,
+    "dropout": 0.0,
+    "bias": false
+  },
+  "training": {
+    "seeds": [4409, 5501, 6607],
+    "batch_size": 8,
+    "threads": 10,
+    "checkpoint_tokens": [2000000],
+    "intervention_tokens": 250000,
+    "continuation_horizons": [500000, 1000000, 2000000],
+    "learning_rate": 0.0003,
+    "minimum_learning_rate": 0.00003,
+    "warmup_tokens": 100000,
+    "schedule_tokens": 6500000,
+    "weight_decay": 0.1,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "gradient_clip": 1.0,
+    "eval_batches_per_domain": 12,
+    "log_every_steps": 100,
+    "save_terminal_checkpoint": true
+  },
+  "screen": {
+    "primary_checkpoint": 2000000,
+    "primary_horizon": 2000000,
+    "supporting_horizon": 1000000,
+    "minimum_terminal_advantage_bpb": 0.01,
+    "maximum_domain_regression_bpb": 0.02,
+    "require_all_seeds": true
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "causal_audit": [
+    {
+      "continuation_sha256": [
+        "b7c1f4882c3adfa7224a7699e240f95c960c6f7c8ab9ef6e637a02cd687f48a6"
+      ],
+      "identical_continuation_stream": true,
+      "identical_parent": true,
+      "parent_sha256": [
+        "f3903ec1ee870457f7d073a0a0b983f2e319fff75cde4a281cdd90d9e209e266"
+      ],
+      "seed": 4409
+    },
+    {
+      "continuation_sha256": [
+        "aa295b43901f3f4be0468935fdf7d99e89f4143fff1cce798eb67a751a4ce07e"
+      ],
+      "identical_continuation_stream": true,
+      "identical_parent": true,
+      "parent_sha256": [
+        "26edd7982360f3b01c1dcc85e6c5f11e1c3b35ad656dd47ccd2505c9aefce921"
+      ],
+      "seed": 5501
+    },
+    {
+      "continuation_sha256": [
+        "abf79b28bf56122567ee342c8bfe1a5547d33c2e8b65ee22342d439654e34b95"
+      ],
+      "identical_continuation_stream": true,
+      "identical_parent": true,
+      "parent_sha256": [
+        "43b666dc51169a5ac4113610e5039b16112fedb5ae15d47eedfe74df2c8ca856"
+      ],
+      "seed": 6607
+    }
+  ],
+  "checks": {
+    "all_seeds_better_at_primary_horizon": true,
+    "all_seeds_better_at_supporting_horizon": true,
+    "all_seeds_reverse": true,
+    "causal_audit": true,
+    "minimum_mean_terminal_advantage": false,
+    "no_large_domain_regression": true
+  },
+  "decision": "Do not advance to R2; downgrade the long-horizon data-selection arm.",
+  "domain_advantages_at_primary_horizon": {
+    "code": {
+      "by_seed": [
+        -0.009791373606472309,
+        -0.009812068852125932,
+        -0.005591987229029094
+      ],
+      "mean_bpb": -0.008398476562542445
+    },
+    "dialogue_qa": {
+      "by_seed": [
+        0.0031011624965833207,
+        0.0027453303919475758,
+        0.00043242171181923084
+      ],
+      "mean_bpb": 0.0020929715334500423
+    },
+    "prose": {
+      "by_seed": [
+        0.004949861338257477,
+        0.0029339380323940567,
+        0.002456198892072159
+      ],
+      "mean_bpb": 0.0034466660875745645
+    },
+    "science_math": {
+      "by_seed": [
+        0.028299057268871497,
+        0.0310725068242359,
+        0.02986094637645742
+      ],
+      "mean_bpb": 0.029744170156521605
+    }
+  },
+  "estimated_training_flops": 295790513356800,
+  "experiment_id": "nlrr1-replication-screen-v1",
+  "mean_science_immediate_penalty_bpb": 0.1909016788077055,
+  "mean_science_primary_advantage_bpb": 0.006721332803750831,
+  "mean_science_supporting_advantage_bpb": 0.002815336885440741,
+  "observed_runner_wall_seconds": 3142.162496328354,
+  "parameter_count": 2525600,
+  "primary_advantage_95_percent_t_interval": [
+    0.006533087147710702,
+    0.006909578459790959
+  ],
+  "primary_per_byte_perplexity_factor_improvement": 0.004669742303988311,
+  "scientific_status": "rapid falsification screen; not final replication",
+  "screen_status": "fail",
+  "sealed_splits_used": {
+    "meta_test": false,
+    "replication": false
+  },
+  "seed_results": [
+    {
+      "rank_reversal_at_both_horizons": true,
+      "science_advantage_at_primary_horizon_bpb": 0.0066396768743097745,
+      "science_advantage_at_supporting_horizon_bpb": 0.00047656034256915447,
+      "science_immediate_penalty_bpb": 0.1967411299621431,
+      "seed": 4409
+    },
+    {
+      "rank_reversal_at_both_horizons": true,
+      "science_advantage_at_primary_horizon_bpb": 0.006734926599112789,
+      "science_advantage_at_supporting_horizon_bpb": 0.0016661858364184212,
+      "science_immediate_penalty_bpb": 0.18702471929361542,
+      "seed": 5501
+    },
+    {
+      "rank_reversal_at_both_horizons": true,
+      "science_advantage_at_primary_horizon_bpb": 0.006789394937829929,
+      "science_advantage_at_supporting_horizon_bpb": 0.006303264477334647,
+      "science_immediate_penalty_bpb": 0.18893918716735802,
+      "seed": 6607
+    }
+  ],
+  "tokens_per_step": 2048,
+  "total_training_tokens": 19519488
+}

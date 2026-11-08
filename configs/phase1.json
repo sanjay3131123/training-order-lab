@@ -1,0 +1,52 @@
+{
+  "experiment_id": "nlrr1-discovery-v1",
+  "cache_dir": ".cache/training-order-lab",
+  "domains": ["prose", "science_math", "code", "dialogue_qa"],
+  "actions": ["prose", "science_math", "code", "dialogue_qa", "balanced"],
+  "data": {
+    "target_bytes": {
+      "train": 4000000,
+      "development": 384000,
+      "meta_test": 384000,
+      "replication": 384000
+    },
+    "minimum_document_bytes": 160,
+    "maximum_document_bytes": 200000,
+    "openalex_pages_per_concept": 12,
+    "openalex_per_page": 200,
+    "source_seed": 1729
+  },
+  "model": {
+    "vocab_size": 258,
+    "block_size": 256,
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 224,
+    "dropout": 0.0,
+    "bias": false
+  },
+  "training": {
+    "seeds": [1103, 2207, 3301],
+    "batch_size": 8,
+    "threads": 10,
+    "checkpoint_tokens": [2000000, 5000000],
+    "intervention_tokens": 250000,
+    "continuation_horizons": [250000, 500000, 1000000],
+    "learning_rate": 0.0003,
+    "minimum_learning_rate": 0.00003,
+    "warmup_tokens": 100000,
+    "schedule_tokens": 6500000,
+    "weight_decay": 0.1,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "gradient_clip": 1.0,
+    "eval_batches_per_domain": 12,
+    "log_every_steps": 100
+  },
+  "analysis": {
+    "lambda_worst_domain": 0.25,
+    "normalization_floor_bpb": 0.01,
+    "candidate_requires_all_seeds": true,
+    "candidate_requires_horizons": 2
+  }
+}
